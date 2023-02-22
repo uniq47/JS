@@ -20,7 +20,7 @@ phoneInput.addEventListener('blur', function(){
     const postalregex = /^\d{5}$/;
     if(postalValue === ''){
         
-        postalInput.nextElementSibling.innerText = 'Please enter a zip code';
+        postalInput.nextElementSibling.innerText = 'Please enter thhe  zip code';
     }
     else if(!regex.test(postalValue)){
         postalInput.nextElementSibling.innerText = 'Please enter a valid zip code';

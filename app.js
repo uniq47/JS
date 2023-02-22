@@ -1,21 +1,32 @@
-const nyName ="Max";
-let myCountry ="Nepal";
-myCountry ="USA";
+const phoneInput = document.getElementById('phone');
+const postalInput = document.getElementById('postal');
+console.log(phoneInput)
 
-console.log(typeof myCountry);
-console.log(myCountry);
+phoneInput.addEventListener('blur', function(){
+    const phoneValue = phoneInput.value.trim();
+    const postalCode= postalInput.value.trim();
+    //REGEX for phone number
+    const regex = /^\d{10}$/;
+    if(phoneValue === ''){
+        
+        phoneInput.nextElementSibling.innerText = 'Please enter a phone number';
+    }
+    else if(!regex.test(phoneValue)){
+        phoneInput.nextElementSibling.innerText = 'Please enter a valid phone number';
+    }
+    else{
+        phoneInput.nextElementSibling.innerText = 'yo';
+    }
+    const postalregex = /^\d{5}$/;
+    if(postalValue === ''){
+        
+        postalInput.nextElementSibling.innerText = 'Please enter a zip code';
+    }
+    else if(!regex.test(postalValue)){
+        postalInput.nextElementSibling.innerText = 'Please enter a valid zip code';
+    }
+    else{
+        postalInput.nextElementSibling.innerText = 'yo';
+    }
+})
 
-const myName = 7;
-console.log(myName);
-
-
-const countries = ["Nepal", "USA", "UK"];
-console.log(countries[2]);
-
-const aboutMe = {
-    name: "aayam",
-    age: 12,
-    fav_programming_language: "javascript"
-}
-//we use . to access the properties of an object 
-console.log(aboutMe.name);
